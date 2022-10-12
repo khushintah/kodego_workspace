@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JS-Exercise1</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    </head>
+    <body>
+        <h2>https://devdocs.io/javascript/</h2>
+        
+        <input type="text" id="first_number" value="" placeholder="Please put a number">
+        <button onclick="doCheck()">Check</button>
+
+        <div id="1stProblem"></div>
+        
+        <script>
+            //maching problem 1 - Checking if odd or even
+            function doCheck(){
+                let value1 = parseInt(document.getElementById('first_number').value);
+
+                if(value1 % 2 == 0)
+                {
+                    document.getElementById('1stProblem').innerHTML = "number is even";
+                }else{
+                    document.getElementById('1stProblem').innerHTML = "number is odd";
+                }
+            }
+            
+        </script>
+
+        <div>
+            <input type="text" id="second_number" value="" placeholder="Please put a number" maxlength="1">
+            <button onclick="doCheck1()">Check</button>
+    
+            
+            <div id="2ndProblem"></div>
+    
+            <script>
+                //maching problem 2 - checking if vowel or consonant
+                function doCheck1(){
+                    let value2 = (document.getElementById('second_number').value);
+                    
+    
+                    if(value2 == 'a' || value2 == 'e' || value2 == 'i' || value2 == 'o' || value2 == 'u')
+                    {
+                        document.getElementById('2ndProblem').innerHTML = 'Vowel';
+                    }else{
+                        document.getElementById('2ndProblem').innerHTML = 'Consonant';
+                    }
+    
+                }
+                
+            </script>
+            </div>
+
+
+    </body>
+</html>
