@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>JS-Exercise2</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    </head>
+
+    <body>
+        <h1>Switch Case</h1>
+
+        <h2>Machine Problem 1</h2>
+        <div>
+            <table>
+                <tr>
+                    <td> <input type="text" id="MP1" placeholder="Enter character"/> </td>
+                </tr>
+                <tr>
+                    <td> <button onclick = "problem1()">Check</button> </td> 
+                </tr>
+            </table>
+                <div id="num"></div>
+            
+                <script type="text/javascript">
+                
+                    function problem1()
+                        {
+                            let char;
+                            char = document.getElementById("MP1").value.toLowerCase();
+                            switch(char)
+                                {   
+                                    case 'a': 
+                                    case 'e':
+                                    case 'i':
+                                    case 'o':
+                                    case 'u':
+                                
+                                    document.getElementById("num").innerHTML= "This is a Vowel";
+                                    break;
+                                    default: document.getElementById("num").innerHTML= "This is a consonant";
+                                    break; 
+                                }
+                        }
+                </script>
+        </div>
+
+    </body>
+</html>
