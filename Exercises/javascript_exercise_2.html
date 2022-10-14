@@ -20,9 +20,9 @@
                     <td> <button onclick = "problem1()">Check</button> </td> 
                 </tr>
             </table>
-                <div id="num"></div>
+                <div id="char"></div>
             
-                <script type="text/javascript">
+                <script>
                 
                     function problem1()
                         {
@@ -36,14 +36,67 @@
                                     case 'o':
                                     case 'u':
                                 
-                                    document.getElementById("num").innerHTML= "This is a Vowel";
+                                    document.getElementById("char").innerHTML= "This is a Vowel";
                                     break;
-                                    default: document.getElementById("num").innerHTML= "This is a consonant";
+                                    default: document.getElementById("char").innerHTML= "This is a consonant";
                                     break; 
                                 }
                         }
                 </script>
         </div>
+
+
+
+        <div>
+
+            <h2>Machine Problem 2</h2>
+            <input type="number" placeholder="Enter first number" id="number1" />
+            <input type="number" placeholder="Enter second number" id="number2" />
+            <div id=op>
+                <button onclick="calculator()">+ (Addition)</button>
+                <button onclick="calculator()">-</button>
+                <button onclick="calculator()">/</button>
+                <button onclick="calculator()">*</button>
+            </div>
+            <div id="cvalue"></div>
+
+
+            <script>
+                function calculator()
+                switch(op) {
+                    case '+':
+                        result = number1 + number2;
+                        console.log(`${number1} + ${number2} = ${result}`);
+                        break;
+
+                    case '-':
+                        result = number1 - number2;
+                        console.log(`${number1} - ${number2} = ${result}`);
+                        break;
+
+                    case '*':
+                        result = number1 * number2;
+                        console.log(`${number1} * ${number2} = ${result}`);
+                        break;
+
+                    case '/':
+                        result = number1 / number2;
+                        console.log(`${number1} / ${number2} = ${result}`);
+                        break;
+
+                    default:
+                        console.log('Invalid operator found');
+                        break;
+            </script>
+
+
+
+
+           
+    
+    
+        </div>
+
 
     </body>
 </html>
