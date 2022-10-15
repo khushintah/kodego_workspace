@@ -46,23 +46,26 @@
         </div>
 
 
-
+/////////////////////////////////////////////////////////////////////////////////////////////////
         <div>
 
             <h2>Machine Problem 2</h2>
             <input type="number" placeholder="Enter first number" id="number1" />
             <input type="number" placeholder="Enter second number" id="number2" />
             <div id=op>
-                <button onclick="calculator()">+ (Addition)</button>
-                <button onclick="calculator()">-</button>
-                <button onclick="calculator()">/</button>
-                <button onclick="calculator()">*</button>
+                <button class="button" data-operator="+">+ (Addition)</button>
+                <button class="button" data-operator="+">-</button>
+                <button class="button" data-operator="+">/</button>
+                <button class="button" data-operator="+">*</button>
+                <button class="button" data-operator="+">=</button>
             </div>
-            <div id="cvalue"></div>
+            <div id="result5"></div>
 
 
             <script>
-                function calculator()
+
+                document.getElementsByClassName("button")
+                function calculator.getelemen()
                 switch(op) {
                     case '+':
                         result = number1 + number2;
@@ -88,6 +91,114 @@
                         console.log('Invalid operator found');
                         break;
             </script>
+        </div>
+
+        
+            <div>
+
+                <h2>Switch Case getting the day of the week</h2>
+
+                <input type="date" onchange="getWeekDayName(event)"/>
+                <div id="result6"></div>
+
+                <script>
+
+                    function getWeekDayName(e){
+                        let date = new Date(e.currentTarget.value);
+                        let day = date.getDay();
+
+                        switch(day){
+                            case 0:
+                                document.getElementById("result6").innerHTML = "Sunday";
+                                break;
+                            case 1: 
+                                document.getElementById("result6").innerHTML = "Monday";
+                                break;
+                            case 2: 
+                                document.getElementById("result6").innerHTML = "Tuesday";
+                                break;
+                            case 3: 
+                                document.getElementById("result6").innerHTML = "Wednesday";
+                                break;
+                            case 4: 
+                                document.getElementById("result6").innerHTML = "Thursday";
+                                break;
+                            case 5: 
+                                document.getElementById("result6").innerHTML = "Friday";
+                                break;
+                            case 6: 
+                                document.getElementById("result6").innerHTML = "Saturday";
+                                break;
+                            default:
+                                document.getElementById("result6").innerHTML = "Unknown date value";
+                                break;
+                        }
+                    }
+                </script>
+            
+            </div>
+
+            <div>
+
+                <h2>Switch Case getting the Month of the year</h2>
+
+                <input type="date" onchange="getMonthYearName(event)"/>
+                <div id="result7"></div>
+
+                <script>
+
+                    function getMonthYearName(e){
+                        let date = new Date(e.currentTarget.value);
+                        let day = date.getMonth();
+
+                        switch(day){
+                            case 0:
+                                document.getElementById("result7").innerHTML = "January";
+                                break;
+                            case 1:
+                                document.getElementById("result7").innerHTML = "February";
+                                break;
+                            case 2:
+                                document.getElementById("result7").innerHTML = "March";
+                                break;
+                            case 3:
+                                document.getElementById("result7").innerHTML = "April";
+                                break;
+                            case 4:
+                                document.getElementById("result7").innerHTML = "May";
+                                break;
+                            case 5:
+                                document.getElementById("result7").innerHTML = "June";
+                                break;
+                            case 6:
+                                document.getElementById("result7").innerHTML = "July";
+                                break;
+                            case 7:
+                                document.getElementById("result7").innerHTML = "August";
+                                break;
+                            case 8:
+                                document.getElementById("result7").innerHTML = "September";
+                                break;
+                            case 9:
+                                document.getElementById("result7").innerHTML = "October";
+                                break;
+                            case 10:
+                                document.getElementById("result7").innerHTML = "November";
+                                break;
+                            case 11:
+                                document.getElementById("result7").innerHTML = "December";
+                                break;
+                            
+                            default:
+                                document.getElementById("result7").innerHTML = "Unknown date value";
+                                break;
+                        }
+                    }
+                </script>
+            
+            </div>
+
+        
 
 
 
@@ -95,7 +206,7 @@
            
     
     
-        </div>
+        
 
 
     </body>
